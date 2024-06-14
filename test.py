@@ -1,10 +1,10 @@
-import spacy
-from textblob import TextBlob
+import spacy #importing spacy library into our code
+from textblob import TextBlob #importing TextBlob library
 
-# Load spaCy model
+# Load spaCy model 
 nlp = spacy.load("en_core_web_sm")
 
-def analyze_sentiment(response):
+def analyze_sentiment(response): #analysing the responses whether they are positive, negative or neutral
     blob = TextBlob(response)
     polarity = blob.sentiment.polarity
     if polarity > 0:
@@ -14,7 +14,7 @@ def analyze_sentiment(response):
     else:
         return "Neutral"
 
-def extract_key_phrases(response):
+def extract_key_phrases(response): #spacy helps in extracting the key phrases from the entire text
     doc = nlp(response)
     key_phrases = [chunk.text for chunk in doc.noun_chunks]
     return key_phrases
