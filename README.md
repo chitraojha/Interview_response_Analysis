@@ -1,4 +1,4 @@
-# Interview_response_Analysis
+# Interview_response_Analysis_Project
 A project for analysing interview responses by determining sentiment with TextBlob, extracting key phrases with spaCy, and providing an overall quality assessment.
 Task Description:
 
